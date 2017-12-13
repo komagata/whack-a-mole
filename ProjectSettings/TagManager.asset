@@ -41,6 +41,9 @@ TagManager:
   - name: Background
     uniqueID: 1223940649
     locked: 0
+  - name: Mole
+    uniqueID: 1316551057
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
