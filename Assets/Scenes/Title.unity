@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 724394726}
   - component: {fileID: 724394725}
   m_Layer: 0
-  m_Name: kanban
+  m_Name: ranking-sign-board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 1335320157}
   - component: {fileID: 1335320156}
   m_Layer: 0
-  m_Name: bg
+  m_Name: grass-field
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -357,7 +357,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1365420429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -230, y: -220, z: 0}
+  m_LocalPosition: {x: 0, y: -100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1484100643}
@@ -365,9 +365,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -230, y: -220}
-  m_SizeDelta: {x: 460, y: 180}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -100}
+  m_SizeDelta: {x: 480, y: 180}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365420431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,7 +619,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1484100639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 817, y: 459.5, z: 0}
+  m_LocalPosition: {x: 731.5, y: 411.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1365420430}
@@ -658,7 +658,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1537801630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 792, y: 439.5, z: 0}
+  m_LocalPosition: {x: 706.5, y: 391.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1484100643}
@@ -1046,7 +1046,7 @@ GameObject:
   - component: {fileID: 1895010241}
   - component: {fileID: 1895010240}
   m_Layer: 0
-  m_Name: top-mole
+  m_Name: mole-on-hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
