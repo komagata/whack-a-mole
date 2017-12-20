@@ -4,43 +4,23 @@ using UnityEngine;
 
 public class MoleGenerator : MonoBehaviour {
 	public GameObject molePrefab;
-	public float diff = -2.28f;
 
-	GameObject mole1;
-	GameObject mole2;
-	GameObject mole3;
-
-	Vector3 startPosition1;
-	Vector3 startPosition2;
-	Vector3 startPosition3;
+	Mole mole1;
+	Mole mole2;
+	Mole mole3;
 
 	void Start () {
-		mole1 = Instantiate (molePrefab) as GameObject;
-		startPosition1 = new Vector3 (-6.02f, -3.51f, 0);
-		mole1.transform.position = startPosition1;
+		this.mole1 = Instantiate(this.molePrefab).GetComponent<Mole>();
+		mole1.startPosition = new Vector3 (-6.02f, -3.51f, 0);
 
-		mole2 = Instantiate (molePrefab) as GameObject;
-		startPosition2 = new Vector3 (0.2f, -4.31f, 0);
-		mole2.transform.position = startPosition2;
+		this.mole2 = Instantiate(this.molePrefab).GetComponent<Mole>();
+		mole2.startPosition = new Vector3 (0.2f, -4.31f, 0);
 
-		mole3 = Instantiate (molePrefab) as GameObject;
-		startPosition3 = new Vector3 (6.13f, -2.16f, 0);
-		mole3.transform.position = startPosition3;
+		this.mole3 = Instantiate(this.molePrefab).GetComponent<Mole>();
+		mole3.startPosition = new Vector3 (6.13f, -2.16f, 0);
 	}
 
 	void Update () {
-		Debug.Log (startPosition1.y);
-		Debug.Log (mole1.transform.position.y);
-		Debug.Log (startPosition1.y - mole1.transform.position.y);
 
-		if (startPosition1.y - mole1.transform.position.y > diff) {
-			mole1.transform.Translate (0, 0.08f, 0);
-			mole2.transform.Translate (0, 0.08f, 0);
-			mole3.transform.Translate (0, 0.08f, 0);
-		} else {
-			mole1.transform.Translate (0, -0.08f, 0);
-			mole2.transform.Translate (0, -0.08f, 0);
-			mole3.transform.Translate (0, -0.08f, 0);
-		}
 	}
 }
