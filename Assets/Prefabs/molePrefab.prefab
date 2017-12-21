@@ -18,9 +18,10 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4575786874352160}
+  - component: {fileID: 224364719723909296}
   - component: {fileID: 212997938935433050}
   - component: {fileID: 114920059005569038}
+  - component: {fileID: 114923914422253352}
   m_Layer: 0
   m_Name: molePrefab
   m_TagString: Untagged
@@ -28,19 +29,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4575786874352160
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1924792525657960}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.97, y: -1.37, z: 0}
-  m_LocalScale: {x: 0.3767308, y: 0.3767308, z: 0.3767308}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114920059005569038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,7 +40,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c40ffccc81e31433c9dfa66413fba5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
+  speed: 2
+  maxDistance: 2
+--- !u!114 &114923914422253352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1924792525657960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -146154839, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212997938935433050
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -96,4 +97,22 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
+--- !u!224 &224364719723909296
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1924792525657960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3767308, y: 0.3767308, z: 0.3767308}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -5.97, y: -1.37}
+  m_SizeDelta: {x: 7.24, y: 7.4}
+  m_Pivot: {x: 0.5, y: 0.5}
