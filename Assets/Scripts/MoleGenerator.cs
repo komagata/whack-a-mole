@@ -5,22 +5,21 @@ using UnityEngine;
 public class MoleGenerator : MonoBehaviour {
 	public GameObject molePrefab;
 
-	Mole mole1;
-	Mole mole2;
-	Mole mole3;
+	float timer;
 
 	void Start () {
-		this.mole1 = Instantiate(this.molePrefab).GetComponent<Mole>();
-		mole1.startPosition = new Vector3 (-6.02f, -3.51f, 0);
-
-		this.mole2 = Instantiate(this.molePrefab).GetComponent<Mole>();
-		mole2.startPosition = new Vector3 (0.2f, -4.31f, 0);
-
-		this.mole3 = Instantiate(this.molePrefab).GetComponent<Mole>();
-		mole3.startPosition = new Vector3 (6.13f, -2.16f, 0);
+		Mole mole1 = CreateMole (new Vector3 (-6.02f, -3.51f, 0));
+		//Mole mole2 = CreateMole (new Vector3 (0.2f, -4.31f, 0));
+		//qMole mole3 = CreateMole (new Vector3 (6.13f, -2.16f, 0));
 	}
 
 	void Update () {
+		this.timer += Time.deltaTime;
+	}
 
+	Mole CreateMole(Vector3 position) {
+		GameObject prefabMole = Instantiate (this.molePrefab, position, Quaternion.identity);
+		Debug.Log(prefabMole.transform.position);
+		return prefabMole.GetComponent<Mole>();
 	}
 }
