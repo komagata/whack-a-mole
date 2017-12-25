@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BackController : MonoBehaviour {
+public class BackSignController : MonoBehaviour {
 	public void OnClick () {
 		SceneManager.LoadScene ("Title");
 	}
