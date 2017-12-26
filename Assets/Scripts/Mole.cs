@@ -9,17 +9,17 @@ public class Mole : MonoBehaviour {
 	void Update () {
 	}
 
-//	public void TurnRight () {
-//		Vector3 localScale = transform.localScale;
-//		localScale.x = -1;
-//		transform.localScale = localScale;
-//	}
-//
-//	public void TurnLeft () {
-//		Vector3 localScale = transform.localScale;
-//		localScale.x = 1;
-//		transform.localScale = localScale;
-//	}
+	public void TurnRight () {
+		Vector3 localScale = transform.localScale;
+		localScale.x = -1;
+		transform.localScale = localScale;
+	}
+
+	public void TurnLeft () {
+		Vector3 localScale = transform.localScale;
+		localScale.x = 1;
+		transform.localScale = localScale;
+	}
 
 	public void DestroyMole () {
 		Debug.Log ("Destroy Mole!!!");

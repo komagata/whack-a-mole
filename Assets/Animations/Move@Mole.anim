@@ -187,4 +187,11 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 1
-  m_Events: []
+  m_Events:
+  - time: 2.3333333
+    functionName: DestroyMole
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
