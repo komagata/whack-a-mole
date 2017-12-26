@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hammer : MonoBehaviour {
 	void Start () {
-		GetComponent<Animator> ().SetTrigger("isBang");
+
 	}
 
 	void Update () {
@@ -12,6 +12,7 @@ public class Hammer : MonoBehaviour {
 	}
 
 	public void DestroyHammer () {
+		Debug.Log ("Destroy Hammer!!!");
 		Destroy (this.gameObject);
 	}
 }

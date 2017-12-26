@@ -1,11 +1,13 @@
 fileFormatVersion: 2
 guid: 833cf0ee134964afa84948f4ba9264e5
-timeCreated: 1513594819
+timeCreated: 1514286818
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - molePrefab: {fileID: 1098330043914612, guid: a13fff0254217456995c22fdfff16bdb,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

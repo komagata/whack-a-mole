@@ -7,19 +7,22 @@ public class HammerGenerator : MonoBehaviour {
 	Hammer hammer;
 
 	void Start () {
-		//AnimatorStateInfo stateInfo = hammerPrefab.GetComponent<Animator>.GetCurrentAnimatorStateInfo (0);
-		//this.animator = GetComponent<Animator> ();
-
-
-
 	}
 
 	void Update () {
 		if (Input.GetMouseButton (0)) {
-			Debug.Log ("CLICK!!");
-			if (this.hammer == null) {
-				this.hammer = Instantiate (this.hammerPrefab, new Vector3 (0.2f, -4.31f, 0), Quaternion.identity).GetComponent<Hammer>();
-			}
+			CreateHammer ();
+		}
+	}
+
+	void CreateHammer () {
+		if (this.hammer == null) {
+			Vector3 clickPos = Input.mousePosition;
+			clickPos.x += 60.0f;
+			clickPos.y += 50.0f;
+			clickPos.z = 10f;
+			Vector3 worldPos = Camera.main.ScreenToWorldPoint(clickPos);
+			this.hammer = Instantiate (this.hammerPrefab, worldPos, Quaternion.identity).GetComponent<Hammer>();
 		}
 	}
 }
