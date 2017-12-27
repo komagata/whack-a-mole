@@ -7,7 +7,7 @@ public class GameTimerController : MonoBehaviour {
 	public GameObject gameover;
 	public Text point;
 	public Image CircleImage;
-	public float countTime = 60.0f;
+	public float countTime = 5.0f;
 	public static bool isFinish = false;
 	float totalTime = 0.0f;
 

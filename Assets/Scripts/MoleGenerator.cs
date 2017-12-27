@@ -12,8 +12,8 @@ public class MoleGenerator : MonoBehaviour {
 
 	void Start () {
 		this.positions [0] = new Vector3 (-6.02f, -4.1f, 0);
-		this.positions [1] = new Vector3 (0.2f, -4.8f, 0);
-		this.positions [2] = new Vector3 (6.13f, -2.45f, 0);
+		this.positions [1] = new Vector3 (0.2f, -5.01f, 0);
+		this.positions [2] = new Vector3 (6.13f, -2.75f, 0);
 	}
 
 	void Update () {

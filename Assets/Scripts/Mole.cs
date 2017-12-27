@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Mole : MonoBehaviour {
+	ParticleSystem particle;
+
 	void Start () {
-		
+		this.particle = GetComponent<ParticleSystem> ();
+		this.particle.Stop ();
 	}
 
 	void Update () {
@@ -30,6 +33,7 @@ public class Mole : MonoBehaviour {
 		GetComponent<Animator>().SetTrigger("isDamege");
 		AudioSource audioSource = GetComponent<AudioSource> ();
 		audioSource.PlayOneShot (audioSource.clip);
+		this.particle.Play ();
 	}
 
 	public void DestroyMole () {
