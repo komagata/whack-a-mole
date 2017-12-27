@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Mole : MonoBehaviour {
 	void Start () {
+		
 	}
 
 	void Update () {
+		if (GameTimerController.isFinish == true) {
+			DestroyMole ();
+		}
 	}
 
 	public void TurnRight () {
@@ -19,6 +23,13 @@ public class Mole : MonoBehaviour {
 		Vector3 localScale = transform.localScale;
 		localScale.x = 1;
 		transform.localScale = localScale;
+	}
+
+	void OnMouseDown() {
+		Score.point++;
+		GetComponent<Animator>().SetTrigger("isDamege");
+		AudioSource audioSource = GetComponent<AudioSource> ();
+		audioSource.PlayOneShot (audioSource.clip);
 	}
 
 	public void DestroyMole () {
