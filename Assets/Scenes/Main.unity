@@ -834,8 +834,8 @@ GameObject:
   - component: {fileID: 771346478}
   - component: {fileID: 771346477}
   - component: {fileID: 771346476}
-  - component: {fileID: 771346480}
   - component: {fileID: 771346479}
+  - component: {fileID: 771346480}
   m_Layer: 5
   m_Name: replay
   m_TagString: Untagged
@@ -1034,9 +1034,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 771346474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3424eb8e266034728aa937b3ac52a23e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e9d1748671f5405c844148144bb3c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameover: {fileID: 556981057}
 --- !u!1 &779694562
 GameObject:
   m_ObjectHideFlags: 0
