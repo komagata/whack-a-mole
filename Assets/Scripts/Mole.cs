@@ -29,6 +29,8 @@ public class Mole : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
+		Destroy (GetComponent<CircleCollider2D> ());
+
 		Score.point++;
 		GetComponent<Animator>().SetTrigger("isDamege");
 		AudioSource audioSource = GetComponent<AudioSource> ();

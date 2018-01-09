@@ -5,19 +5,24 @@ using UnityEngine.UI;
 
 public class ShowRanking : MonoBehaviour {
 	void Start () {
-		List<int> rankings = new List<int>();
 
-		rankings.Add(5);
-		rankings.Add(4);
-		rankings.Add(10);
-		rankings.Add(2);
-		rankings.Add(1);
+		Ranking ranking = RankingDataStore.GetRanking ();
+		Debug.Log (ranking);
 
-		rankings.Sort ((a, b) => b - a);
+		ranking.points.Sort((a, b) => b - a);
+
+		if (ranking.points.Count <= 5) {
+			int rest = 5 - ranking.points.Count;
+			for (int i = 0; i < rest; i++) {
+				ranking.points.Add (5 - i);
+			}
+		}
+
+		ranking.points.Sort((a, b) => b - a);
 
 		string text = "";
-		for (int i = 0; i < rankings.Count; i++) {
-			text += i + 1 + ". " + rankings [i] + "てん\n";
+		for (int i = 0; i < ranking.points.Count; i++) {
+			text += i + 1 + ". " + ranking.points[i] + "てん\n";
 		}
 
 		Text rankingText = GetComponent<Text> ();
